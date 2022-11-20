@@ -39,7 +39,7 @@ const appRoutes: Routes =[
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    
+   
     RouterModule.forRoot(appRoutes),
     
     
