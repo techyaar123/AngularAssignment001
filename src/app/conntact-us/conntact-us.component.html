@@ -2,40 +2,41 @@
 <html lang="en">
   <head>
     <title>Title</title>
-    <!-- Required meta tags -->
+    <!--  meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: black;">
     <div style="height: 20px;"></div>
-    <h1>Drop us a message</h1>
+    <h1 class="col-md-6" style="color: white;">Drop us a message</h1>
     <div style="height: 40px;"></div>
-    <form>
+    <form #contact = "ngForm" (ngSubmit) = "onClickSubmit(contact.value)" >
         <div class="form-group col-md-6">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+          <label for="exampleInputEmail1"  style="color: white;" >Name</label>
+          <input type="text" class="form-control" id="contactName" name="contactName" aria-describedby="emailHelp" placeholder="Enter your name" ngModel required>
           
         </div>
         <div class="form-group col-md-6">
-          <label for="exampleInputPassword1">Email</label>
-          <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your email">
+          <label for="exampleInputPassword1"  style="color: white;" >Email</label>
+          <input type="email" class="form-control" id="contactEmail" name="contactEmail" placeholder="Enter your email " ngModel required>
         </div>
-        <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Phone</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your number">
+        <div class="form-group col-md-6"  style="color: white;">
+            <label for="exampleInputPassword1" >Phone</label>
+            <input type="email" class="form-control" id="contactPhone" name="contactPhone" placeholder="Enter your number" ngModel required>
           </div>
           <div class="form-group purple-border col-md-6">
-            <label for="exampleFormControlTextarea4">Message</label>
-            <textarea class="form-control" id="exampleFormControlTextarea4" rows="3"></textarea>
+            <label for="exampleFormControlTextarea4"  style="color: white;">Message</label>
+            <textarea class="form-control" id="contactMessage" name="contactMessage" rows="3" ngModel required></textarea>
           </div>
           <br>
           <div class="form-row col-md-8">
             <div></div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" ngModel>Submit</button>
     </div>
+    <br>
       </form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

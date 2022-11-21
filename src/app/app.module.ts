@@ -12,7 +12,7 @@ import { ConntactUsComponent } from './conntact-us/conntact-us.component';
 import { RouterModule , Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { FormsModule } from '@angular/forms';
 const appRoutes: Routes =[		
   {path:'',redirectTo: '/home', pathMatch: 'full'},
   {path:'home' , component:HomeComponent},
@@ -39,7 +39,7 @@ const appRoutes: Routes =[
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-   
+    FormsModule,
     RouterModule.forRoot(appRoutes),
     
     

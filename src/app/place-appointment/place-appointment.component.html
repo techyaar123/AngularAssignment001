@@ -9,132 +9,132 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background-color: black;">
     <div style="height: 20px;"></div>
     
-    <h1>Place An Appointment</h1>
+    <h1 class="col-md-6" style="color: white;">Place An Appointment</h1>
     <div style="height: 40px;"></div>
-    <form>
+    <form #appointment = "ngForm" (ngSubmit) = "onClickSubmit(appointment.value)">
         <div class="form-row col-md-6">
         <div class="form-group col-md-4">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
+          <label for="name"  style="color: white;">Name</label>
+          <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Enter your name" ngModel>
           
         </div>
         <div class="form-group col-md-4">
-          <label for="exampleInputPassword1">Age</label>
-          <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your Age">
+          <label for="age"  style="color: white;">Age</label>
+          <input type="number" class="form-control" id="age" name="age" placeholder="Enter your Age" ngModel>
         </div>
     </div>
     <div class="form-row col-md-6">
         <div class="form-group col-md-4">
-            <label for="exampleInputPassword1">Email</label>
-            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter your Email">
+            <label for="email"  style="color: white;">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your Email" ngModel>
           </div>
           <div class="form-group col-md-4">
-            <label for="exampleInputPassword1">Mobile Number</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your number">
+            <label for="mobile"  style="color: white;">Mobile Number</label>
+            <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter your number" ngModel>
           </div>
         </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Address Line 1</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address line 1">
+            <label for="address1"  style="color: white;">Address Line 1</label>
+            <input type="text" class="form-control" id="address1" name="address1" placeholder="Enter Address line 1" ngModel>
           </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Address Line 2</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Address line 2">
+            <label for="address2"  style="color: white;">Address Line 2</label>
+            <input type="text" class="form-control" id="address2" name="address2" placeholder="Enter Address line 2" ngModel>
           </div>
           <div class="form-row col-md-6">
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">City</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your City">
+            <label for="city"  style="color: white;">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="Enter your City" ngModel>
           </div>
           <div class="form-group col-md-4">
-            <label for="exampleInputPassword1">State</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your State">
+            <label for="state"  style="color: white;">State</label>
+            <input type="text" class="form-control" id="state" name="state" placeholder="Enter your State" ngModel>
           </div>
         </div>
         <div class="form-row col-md-6">
           <div class="form-group col-md-4">
-            <label for="exampleInputPassword1">Country</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter your Country">
+            <label for="country"  style="color: white;">Country</label>
+            <input type="text" class="form-control" id="country" name="country" placeholder="Enter your Country" ngModel>
           </div>
           <div class="form-group col-md-4">
-            <label for="exampleInputPassword1">Pincode</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter your Pincode">
+            <label for="pincode"   style="color: white;">Pincode</label>
+            <input type="number" class="form-control" id="pincode" name="pincode" placeholder="Enter your Pincode" ngModel>
           </div>
         </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Trainer Perference</label>
+            <label for="trainer"  style="color: white;">Trainer Perference</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="trainer" id="trainer" value="Male"  ngModel>
+                <label class="form-check-label" for="trainer"  style="color: white;">
                   Male
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="trainer" id="trainer" value="Female" ngModel>
+                <label class="form-check-label" for="trainer"  style="color: white;">
                   Female
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
-                <label class="form-check-label" for="exampleRadios3">
+                <input class="form-check-input" type="radio" name="trainer" id="trainer" value="No Perference" ngModel>
+                <label class="form-check-label" for="trainer"  style="color: white;">
                   No Perference
                 </label>
               </div>
           </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Do you need Physiotherapist</label>
+            <label for="physio"  style="color: white;">Do you need Physiotherapist</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                <label class="form-check-label" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="physio" id="physio" value="Yes"  ngModel>
+                <label class="form-check-label" for="physio"  style="color: white;">
                   Yes
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="physio" id="physio" value="No" ngModel>
+                <label class="form-check-label" for="physio"  style="color: white;">
                   No
                 </label>
               </div>
              
           </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Select Package</label>
+            <label for="plan"  style="color: white;">Select Package</label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" (click)="toggle2()" checked>
-                <label class="form-check-label" for="exampleRadios1">
+                <input class="form-check-input" type="radio" name="plan" id="plan" value="One time" (click)="toggle2()" ngModel>
+                <label class="form-check-label" for="plan"  style="color: white;">
                   One time appointment(Rs. 500/-)
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" (click)="toggle()">
-                <label class="form-check-label" for="exampleRadios2">
+                <input class="form-check-input" type="radio" name="plan" id="plan" value="4 session per week" (click)="toggle()" ngModel>
+                <label class="form-check-label" for="plan"  style="color: white;">
                   4 session per week(Rs. 400/- per session) 
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" (click)="toggle3()">
-                <label class="form-check-label" for="exampleRadios3">
+                <input class="form-check-input" type="radio" name="plan" id="plan" value="5 session per week" (click)="toggle3()" ngModel>
+                <label class="form-check-label" for="plan"  style="color: white;">
                     5 session per week(Rs. 300/- per session) 
                 </label>
               </div>
           </div>
           <div class="form-group col-md-3">
-            <label for="exampleInputPassword1">Weeks</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Weeks" [disabled]="textBoxDisabled" (keyup)="onKey($event)">
+            <label for="weeks"  style="color: white;">Weeks</label>
+            <input type="number" class="form-control" id="weeks" name="weeks" placeholder="Enter Weeks" [disabled]="textBoxDisabled" (keyup)="onKey($event)" ngModel>
           </div>
           <div class="form-group col-md-3">
-            <label for="exampleInputPassword1">Amount</label>
-            <input type="number" class="form-control" id="exampleInputPassword1"  [value]="amount">
+            <label for="amount"  style="color: white;">Amount</label>
+            <input type="number" class="form-control" id="amount" name="amount" placeholder="Your Total bill"  [value]="amount" ngModel>
           </div>
         <br>
         <div class="form-row col-md-8">
 
             <div></div>
-            <button type="submit" class="btn btn-primary ">Submit</button>
+            <button type="submit" class="btn btn-primary "ngModel>Submit</button>
         </div>
         
       </form>
